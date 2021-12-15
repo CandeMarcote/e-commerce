@@ -1,0 +1,13 @@
+JSX : es una manera de escribir JS con otra sintaxis.
+
+- crear etiqueta p
+const p = document.createElement('p');
+p.innerText = 'Hola Mundo'
+
+ahora con Babbel podemos hacer esto:
+<p></p> --> esto NO ES HTML, está en un archivo de JS y es sintaxis de JS que podemos crear gracias al entorno en el que estamos trabajando.
+(esto es JSX)
+
+si yo tuviera una app() {...}
+con JSX podemos llamarla asi
+<app/> || <app></app>

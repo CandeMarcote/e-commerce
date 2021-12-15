@@ -1,17 +1,14 @@
-import React from 'react';
+// traigo la libreria react. Tener a react en scope
+// import react from 'react';
+// tambien puede ser const React = require('react')
+
+//tener a ReactDOM en scope
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+/*importamos la funcion que vamos a correr, que esta en el archivo App.js o App.jsx (no cierra mucho el .jsx, todo el mundo usa .js)*/
+import App from "./App.js" //(no es necesario el .js, se puede obviar)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+//esta funcion renderiza todo en el browser. El parametro a es una aplicacion de react y el b es el lugar donde queres que esa app se termine viendo. Muestra todo en el DOM.
+/*En teoria podria mostrarse en el body o div pero por documentacion de React y buena practica NUNCA se muestra en el body (por regla de react, pero deberia funcionar igual)  */
+ReactDOM.render(<App/>,document.getElementById('root'));
