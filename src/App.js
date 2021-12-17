@@ -1,9 +1,13 @@
-import Navbar from './components/Navbar';
+import Header from './components/Header';
+import ItemListContainer from './components/ItemListContainer';
+import Footer from './components/Footer';
 
 function App() {
     return (
         <>
-            <Navbar></Navbar>
+            <Header />
+            <ItemListContainer greeting="Welcome to the candle shop"/>
+            <Footer />
         </>
     )
 }
