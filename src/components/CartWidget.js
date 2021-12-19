@@ -4,7 +4,9 @@ import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 
 const CartWidget = () => {
     return (
-        <FontAwesomeIcon icon={faShoppingCart} />
+        <button className="cartBtn">
+            <FontAwesomeIcon icon={faShoppingCart} />
+        </button>
     )
 }
 
