@@ -11,3 +11,40 @@ ahora con Babbel podemos hacer esto:
 si yo tuviera una app() {...}
 con JSX podemos llamarla asi
 <app/> || <app></app>
+
+Hooks: son funciones. No pueden estar el condicionales, ciclos, en el retorno o fuera de un componente. UseState y useEffect son Hooks.
+
+Props: datos que se pasan a los componentes y llegan en forma de objeto.
+
+useState: es un hook de estado. Nos da un estadp y una f! de cambio.
+
+useEffect: es un hook que se ejecuta por default despues de cada render.
+Tiene dos parametros: el primero es una funcion y el segundo (que puede estar explicito o no) es un array
+
+
+
+const arr = [1, 2, 3]
+
+
+
+
+class App extends Component {
+    constructor () {}
+    render() {}
+    componentDidMount(){}: hace algo despues de que el componente se monte, o sea despues de que se dibuje pero no despues de cada actualizacion, una única vez cuando el componente entro en pantalla. Pedidos a bases de datos, archivos, api res
+    componentDidUpdate(){}: hace algo cuando el componente se actualice pero no la primera vez que se dibuja.
+    shouldComponentUpdate(){}
+    componentWillUnmount(){}: hace algo justo antes de que el componente se desdibuje. se hace poniendo un return con la funcion que queremos detener en el useEffect
+}
+
+setTimeOut(f!, delay en ms).
+
+Promises: objectos que sirven para saber si algo se ejecutó, se está ejecutando o ha terminado de ejecutarse.
+const promesa = new Promise((res, rej)?=>{
+res([1,2,3])
+})
+promesa.then(callback) --> si sale bien
+promesa.catch(callback) --> si sale mal
+toma un callback con dos parametros que son funciones.
+
+res y rej sirven para cambiar el estado. res for resolved/fulfilled, rej for rejected. Sirven para setear un resultado.

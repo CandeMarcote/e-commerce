@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useState } from "react";
 
+const ItemCount = ({greeting, initial, stock}) => {
+    
 
-const ItemCount = ({ greeting, initial = 1, stock = 6 }) => {
-
+    greeting = "hello!"
     //const resultado = useState(0)
     //const contador = resultado[=]
     //cnost setContador = resultad[1]
@@ -10,7 +11,7 @@ const ItemCount = ({ greeting, initial = 1, stock = 6 }) => {
     const [contador, setContador] = useState(initial)
     // const[toggle, setToggle] = useState(false)
     //let contador = 0
-    
+
     const aumentarContador = () => {
         if (contador <= stock - 1) {
             //contador++
