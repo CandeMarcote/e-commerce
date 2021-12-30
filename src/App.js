@@ -1,12 +1,12 @@
 import Header from './components/Header';
-import ItemListContainer from './components/ItemListContainer';
+import ItemList from './components/ItemList';
 import Footer from './components/Footer';
 
 function App() {
     return (
         <>
             <Header />
-            <ItemListContainer greeting="Welcome to the candle shop"/>
+            <ItemList />
             <Footer />
         </>
     )

@@ -82,5 +82,9 @@ body {
     button {
         padding: 5px;
     }
-    
+    .itemImg {
+        max-width: 300px;
+        aspect-ratio: 1;
+        object-fit: contain;
+    }
 }
