@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "title": "Candle 1",
+        "price": 300,
+        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGjezB7jn_AMFQOZZjWdezpTUpfUpPNsD8Tmz5o5RArS1EmsKYQLv64asnpNpsfAM9SdQ&usqp=CAU"
+    },
+    {
+        "id":2,
+        "title": "Candle 2",
+        "price": 400,
+        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGjezB7jn_AMFQOZZjWdezpTUpfUpPNsD8Tmz5o5RArS1EmsKYQLv64asnpNpsfAM9SdQ&usqp=CAU"
+    },
+    {
+        "id":3,
+        "title": "Candle 3",
+        "price": 500,
+        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGjezB7jn_AMFQOZZjWdezpTUpfUpPNsD8Tmz5o5RArS1EmsKYQLv64asnpNpsfAM9SdQ&usqp=CAU"
+    }
+]

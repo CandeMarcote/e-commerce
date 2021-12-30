@@ -43,8 +43,29 @@ Promises: objectos que sirven para saber si algo se ejecutó, se está ejecutand
 const promesa = new Promise((res, rej)?=>{
 res([1,2,3])
 })
-promesa.then(callback) --> si sale bien
+promesa.then(callback){ --> si sale bien
+*Intermedio de validacion y transformación para fetch:
+    Response.json () --> pasa todo a json
+    Response.text () --> pasa todo a text o html
+    Response.blob () --> pasa todo a archivo, imagen, video todo eso
+    Response.arrayBuffer () --> pasa todo a array
+    *usamos lo que nos convenga
+}
 promesa.catch(callback) --> si sale mal
 toma un callback con dos parametros que son funciones.
+promesa.finally(...) --> va despues del catch o then (?) se usa en fetch
 
 res y rej sirven para cambiar el estado. res for resolved/fulfilled, rej for rejected. Sirven para setear un resultado.
+
+
+API: programa intermedio entre dos entidades que quieren comunicarse.
+API web: Lee javascript y lo traduce a browser.
+API rest: una maquina hace cosas y por cada cosa te da una URL que despues podes usar en otra maquina para obtener informacion. Intercambia Json
+API soap: usa XML y la manera de pasar info es mas protocolar y da mas confianza. No se suelen necesitar, son mas complejas y mas viejas.
+
+AJAX: async JS and XML. suele usar API rest. 
+Axios: librerias para hacer peticiones AJAX. funciona en base a promesas.
+XMLHttpRequest (XHR) : es una API WEB y funciona para hacer peticiones ajax con eventos.
+
+Fetch: es una API web y funciona para hacer peticiones ajax con prommise.
+
