@@ -5,6 +5,7 @@
 
     --clr-bg: #f8eae1;
     --clr-primary: #7b5051;
+    --clr-burlywood05: rgb(222, 184, 135, 0.3);
 }
 
 *, *::before, *::after {
@@ -55,14 +56,6 @@ body {
         display: grid;
         place-content: center;    
     }
-    
-    footer {
-        background-color: var(--clr-primary);
-        min-height: 15vh;
-        color: var(--clr-bg);
-        display: grid;
-        place-content: center;
-    }
 
     .cartBtn {
         border: none;
@@ -79,12 +72,64 @@ body {
         }
     }
 
-    button {
-        padding: 5px;
+    .items__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 2em;
+
+        .item {
+            background-color: var(--clr-burlywood05);
+            box-shadow: 0 0 10px 5px rgb(176, 196, 180, 0.5);
+            color: var(--clr-primary);
+            border-radius: 1.5em;
+            margin: 1.5em auto;
+
+            .itemImg {
+                max-width: 225px;
+                aspect-ratio: 1;
+                object-fit: contain;
+                border-radius: 1.5em;
+            }
+
+            .titleAndPrice {
+                &>*{
+                    font-size: 1.2rem;
+                    padding: 5px 1rem;
+                    font-weight: thin;
+                }
+
+                h5 {
+                    font-size: 1.5rem;
+                    font-weight: bolder;
+
+                }
+            }
+
+            .itemCount {
+                text-align: center;
+                font-size: 1.2rem;
+
+                button {
+                    padding: 5px;
+                }
+
+                .itemBtn {
+                    background: none;
+                    border: none;
+                    font-size: 1.2rem;
+                    color: var(--clr-primary);
+                }
+            }
+        }
     }
-    .itemImg {
-        max-width: 300px;
-        aspect-ratio: 1;
-        object-fit: contain;
+    
+    footer {
+        background-color: var(--clr-primary);
+        min-height: 15vh;
+        color: var(--clr-bg);
+        display: grid;
+        place-content: center;
     }
 }
+

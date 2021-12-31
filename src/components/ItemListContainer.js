@@ -26,18 +26,19 @@ const ItemListContainer = ({listaProductos}) => {
         });
     }, []);
 
-    if (loading) {
+    if (loading === true) {
         return (
             <div>
                 <p>Cargando...</p>
             </div>
         );
     } else {
+        console.log(productos)
         return (
             <>
-            {productos.map((producto) => {
-                <Item key={producto.id} producto={producto} />
-            })}
+            {productos.map((producto) => (
+                <Item key={producto.id} producto={producto} stock={5}/>
+            ))}
             </>
         );
     }
