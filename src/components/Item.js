@@ -51,7 +51,7 @@ const Item = ({producto}) => {
             <img src={pictureUrl} alt={title} className='itemImg'/>
             <div className="titleAndPrice">
                 <h5>{title}</h5>
-                <h6>$ {precio}</h6>
+                <h6 className="price">$ {precio}</h6>
             </div>
             <ItemCount></ItemCount>
             <button>Ver más</button>
