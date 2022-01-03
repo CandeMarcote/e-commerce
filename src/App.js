@@ -1,12 +1,14 @@
 import Header from './components/Header';
-import ItemList from './components/ItemList';
+// import ItemList from './components/ItemList';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import Footer from './components/Footer';
 
 function App() {
     return (
         <>
             <Header />
-            <ItemList />
+            {/* <ItemList /> */}
+            <ItemDetailContainer />
             <Footer />
         </>
     )

@@ -54,7 +54,7 @@ body {
     main {
         min-height: 70vh;
         display: grid;
-        place-content: center;    
+        place-content: center;
     }
 
     .cartBtn {
@@ -105,22 +105,6 @@ body {
 
                 }
             }
-
-            .itemCount {
-                text-align: center;
-                font-size: 1.2rem;
-
-                button {
-                    padding: 5px;
-                }
-
-                .itemBtn {
-                    background: none;
-                    border: none;
-                    font-size: 1.2rem;
-                    color: var(--clr-primary);
-                }
-            }
         }
     }
     
@@ -130,6 +114,65 @@ body {
         color: var(--clr-bg);
         display: grid;
         place-content: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-top: 2em;
     }
 }
+
+body {
+    #root {
+        .itemCount {
+            text-align: center;
+            font-size: 1.2rem;
+
+            button {
+                padding: 5px;
+            }
+
+            .itemBtn {
+                background: none;
+                border: none;
+                font-size: 1.2rem;
+                color: var(--clr-primary);
+            }
+        }
+        .itemDetailContainer {
+            .itemDetail {
+                display: flex;
+                margin: 2em;
+                .itemDetail__img {
+                    max-width: 400px;
+                    margin-right: 1.5em;
+                    border-radius: 2em;
+                }
+
+                .container__detail {
+                    // border: var(--border2);
+                    h3,q, p{
+                        margin: 0 auto 0.5em 0;
+                    }
+    
+                    p {
+                        max-width: 60ch;
+                        // margin: 1em;
+                        text-indent: 1rem;
+                    }
+    
+                    .cartButton {
+                        width: 20vw;
+                        padding: 0.7rem;
+                        border: none;
+                        background-color: var(--clr-primary);
+                        color: var(--clr-bg);
+                        font-size: 1.2rem;
+                        margin-top: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
