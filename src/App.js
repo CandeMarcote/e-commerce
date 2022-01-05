@@ -1,15 +1,16 @@
 import Header from './components/Header';
-// import ItemList from './components/ItemList';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import Main from './components/Main';
+import { BrowserRouter } from "react-router-dom"
 import Footer from './components/Footer';
 
 function App() {
     return (
         <>
-            <Header />
-            {/* <ItemList /> */}
-            <ItemDetailContainer />
-            <Footer />
+            <BrowserRouter>
+                <Header />
+                <Main />
+                <Footer />
+            </BrowserRouter>
         </>
     )
 }

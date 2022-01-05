@@ -1,9 +1,10 @@
 import Nav from './Nav'
+import { Link } from 'react-router-dom'
 
 function Header () {
     return (
         <header>
-            <h1>The Candle Shop</h1>
+            <Link to="/" className="header__title"><h1>The Candle Shop</h1></Link>
             <Nav />
         </header>
     )

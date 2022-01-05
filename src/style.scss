@@ -15,10 +15,11 @@
 }
 
 body {
-    background-color: var(--clr-bg);
+    background-color: var(--clr-bg);    
+    font-family: sans-serif;
     
     header {
-        background: linear-gradient(rgb(158, 144, 135, 0.5), rgb(158, 144, 135, 0.7)), url(https://cdn.shopify.com/s/files/1/0331/4188/3012/collections/Flowers_Header_0850_1c6ba1e9-8163-47c2-896d-9f6eb042a9e8_2000x.jpg?v=1592388730);
+        background: linear-gradient(to right, rgb(158, 144, 135, 0.5), rgb(158, 144, 135, 0.7)), url(https://cdn.shopify.com/s/files/1/0331/4188/3012/collections/Flowers_Header_0850_1c6ba1e9-8163-47c2-896d-9f6eb042a9e8_2000x.jpg?v=1592388730);
         display: flex;
         align-items: center;
         color: var(--clr-bg);
@@ -28,8 +29,18 @@ body {
             flex-basis: 100%;
         }
 
-        h1 {
-            margin: 1.5em;
+        .header__title {
+            text-decoration: none;
+
+            h1 {
+                margin: 1.5em;
+                color: var(--clr-bg);
+            }
+
+            &:visited{
+                color:var(--clr-bg);
+                text-decoration: none;
+            }
         }
 
         nav ul{
@@ -42,12 +53,16 @@ body {
                 margin: 1rem;
                 color: var(--clr-bg);
 
-                a {
+                a{
                     font-family: sans-serif;
                     color: var(--clr-bg);
                     text-decoration: none;
                     font-weight: bold;
                     font-size: 1rem;
+
+                    &:visited {
+                        color: var(--clr-bg);
+                    }
                 }
             }
         }
@@ -79,13 +94,17 @@ body {
         flex-wrap: wrap;
         justify-content: space-around;
         margin: 2em;
+        max-width: 75vw;
 
         .item {
             background-color: var(--clr-burlywood05);
-            box-shadow: 0 0 10px 5px rgb(176, 196, 180, 0.5);
+            box-shadow: 1px 1px 5px 2px rgb(176, 196, 180, 0.5);
             color: var(--clr-primary);
             border-radius: 1.5em;
-            margin: 1.5em auto;
+            margin: 1.5em;
+            display: flex;
+            flex-direction: column;
+
 
             .itemImg {
                 max-width: 225px;
@@ -106,6 +125,16 @@ body {
                     font-weight: bolder;
 
                 }
+            }
+
+            .link__verMas {
+                font-size: 1.1rem;
+                text-decoration: none;
+                color: var(--clr-primary);
+                text-align: center;
+                margin:1rem;
+                padding: 5px;
+                background: var(--clr-burlywood05);
             }
         }
     }
@@ -197,5 +226,3 @@ body {
 .price {
     font-size: 1.5rem;
 }
-
-

@@ -1,6 +1,7 @@
 // import React, {useState, useEffect} from 'react'
 import React from 'react';
 import ItemCount from './ItemCount';
+import { Link } from "react-router-dom"
 
 /*const Item = ({id, title, price, pictureUrl}) => {
     const [fake, setFake] = useState([]);
@@ -54,7 +55,7 @@ const Item = ({producto}) => {
                 <h6 className="price">$ {precio}</h6>
             </div>
             <ItemCount></ItemCount>
-            <button>Ver más</button>
+            <Link to={"/item/" + id} className="link__verMas">Ver más</Link>
         </div>
     )
 }

@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
             setItem(res);
             setLoading(true)
         })
-    }, [id]);
+    }, [getItem]);
 
     if (!loading) {
         return (
@@ -38,7 +38,7 @@ const ItemDetailContainer = () => {
     } else {
         return(
             <div className="itemDetailContainer">
-                {item.map((item) => (<ItemDetail item={item} />))}
+                {item.map((item) => (<ItemDetail item={item} key={id}/>))}
             </div>
         )
     }

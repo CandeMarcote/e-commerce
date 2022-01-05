@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import Item from "./Item";
 
 const ItemListContainer = ({listaProductos}) => {
+
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true);
-
     useEffect(() => {
-        console.log("prueba de useEffect");
         const promesa = new Promise((res, rej) => {
             setTimeout(() => {
                 res(listaProductos);
@@ -24,7 +23,7 @@ const ItemListContainer = ({listaProductos}) => {
         promesa.catch(() => {
             console.log("se ha producido un error")
         });
-    }, []);
+    }, [listaProductos]);
 
     if (loading === true) {
         return (
@@ -33,7 +32,6 @@ const ItemListContainer = ({listaProductos}) => {
             </div>
         );
     } else {
-        console.log(productos)
         return (
             <>
             {productos.map((producto) => (
