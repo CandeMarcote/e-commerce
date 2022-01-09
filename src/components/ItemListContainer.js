@@ -37,14 +37,47 @@ const ItemListContainer = ({listaProductos}) => {
             </div>
         );
     } else {
-        return (
-            <>
-            {productos.map((producto) => (
-                <Item key={producto.id} producto={producto} stock={5}/>
-            ))}
-            </>
-        );
+        if (productos.sale === "winter") {
+            const winterSale = productos.filter(producto => producto.sale === "winter");
+            console.log(winterSale);
+
+            return (
+                <>
+                {winterSale.map((producto) => (
+                    <Item key={producto.id} producto={producto} stock={5}/>
+                ))}
+                </>
+            );
+
+        } else if (productos.sale === "summer"){
+            const summerSale = productos.filter(producto => producto.sale === "summer");
+            console.log(summerSale);
+
+            return (
+                <>
+                {summerSale.map((producto) => (
+                    <Item key={producto.id} producto={producto} stock={5}/>
+                ))}
+                </>
+            );
+        } else {
+            console.log(productos);       
+        
+            return (
+                <>
+                {productos.map((producto) => (
+                    <Item key={producto.id} producto={producto} stock={5}/>
+                ))}
+                </>
+            );    
+        }
     }
 };
+
+// function productosMap (element) {
+//     {element.map((producto) => (
+//         <Item key={producto.id} producto={element} stock={producto.stock} />
+//     ))}
+// }
 
 export default ItemListContainer

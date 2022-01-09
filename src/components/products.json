@@ -12,7 +12,8 @@
         "title": "Candle 2",
         "price": 400,
         "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGjezB7jn_AMFQOZZjWdezpTUpfUpPNsD8Tmz5o5RArS1EmsKYQLv64asnpNpsfAM9SdQ&usqp=CAU",
-        "stock": 7
+        "stock": 7,
+        "sale": "summer"
     },
     {
         "id":3,
@@ -35,7 +36,8 @@
         "title": "vela 5",
         "precio": 535,
         "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmfVbn8OXd1cGNzTNEiO79AQOb_sENzkncxw&usqp=CAU",
-        "stock": 5
+        "stock": 5,
+        "sale": "summer"
     },
     {
         "id": 6,
@@ -50,12 +52,15 @@
         "title": "vela 7",
         "precio": 450,
         "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_tNraP8y04VZ-mRXG-OFJcYGq-iHP5h0eQ&usqp=CAU",
-        "stock": 7},
+        "stock": 7,
+        "sale": "summer"
+    },
     {
         "id": 8,
         "title": "vela 8",
         "precio": 550,
         "pictureUrl": "https://i.pinimg.com/550x/ee/7b/52/ee7b5245b52bf3c8b7688beb9b2ff410.jpg",
-        "stock": 7
+        "stock": 7,
+        "sale": "summer"
     }    
 ]
