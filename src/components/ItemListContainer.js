@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 import Item from "./Item";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({listaProductos}) => {
 
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true);
+    const params = useParams();
+    // console.log(listaProductos)
+
+    console.log(params)
     useEffect(() => {
         const promesa = new Promise((res, rej) => {
             setTimeout(() => {

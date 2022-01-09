@@ -6,8 +6,8 @@ function Nav () {
         <nav>
             <ul>
                 <li><Link to="/">Candles</Link></li>
-                <li><Link to="/accesories">Accesories</Link></li>
-                <li><Link to="/about_us">About us</Link></li>
+                {/* <li><Link to="/category/winter_sale">Winter Sale</Link></li>
+                <li><Link to="/category/summer_sale">Summer sale</Link></li> */}
                 <li><Link to="/contact">Contact</Link></li>
                 <li><CartWidget></CartWidget></li>
             </ul>

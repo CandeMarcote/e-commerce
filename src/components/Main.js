@@ -20,6 +20,8 @@ const Main = ()=> {
         <main>
             <Routes>
                 <Route path="/" element={<ItemList />} />
+                {/* <Route path="/item/category/winter_sale" element={<ItemList/>} />
+                <Route path="/item/category/summer_sale" element={<ItemList/>} /> */}
                 <Route path="/item/:id" element={<ItemDetailContainer/>} />
             </Routes>
         </main>
