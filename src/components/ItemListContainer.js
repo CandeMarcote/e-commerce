@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import Item from "./Item";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({listaProductos}) => {
 
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true);
-    const params = useParams();
     // console.log(listaProductos)
 
-    console.log(params)
+// USE PARAMS
+    // const useParams = useParams();
+    // console.log(useParams)
+    
     useEffect(() => {
         const promesa = new Promise((res, rej) => {
             setTimeout(() => {
@@ -36,41 +38,37 @@ const ItemListContainer = ({listaProductos}) => {
                 <p>Cargando...</p>
             </div>
         );
-    } else {
-        if (productos.sale === "winter") {
-            const winterSale = productos.filter(producto => producto.sale === "winter");
-            console.log(winterSale);
-
-            return (
-                <>
-                {winterSale.map((producto) => (
-                    <Item key={producto.id} producto={producto} stock={5}/>
-                ))}
-                </>
-            );
-
-        } else if (productos.sale === "summer"){
-            const summerSale = productos.filter(producto => producto.sale === "summer");
-            console.log(summerSale);
-
-            return (
-                <>
-                {summerSale.map((producto) => (
-                    <Item key={producto.id} producto={producto} stock={5}/>
-                ))}
-                </>
-            );
-        } else {
-            console.log(productos);       
+    } /*else if (loading === false && URL === "category/winter_sale") {
+        const winterSale = productos.filter(producto => producto.sale === "winter");
+        console.log(winterSale);
         
-            return (
-                <>
-                {productos.map((producto) => (
-                    <Item key={producto.id} producto={producto} stock={5}/>
-                ))}
-                </>
-            );    
-        }
+        return (
+            <>
+            {winterSale.map((producto) => (
+                <Item key={producto.id} producto={producto} stock={5}/>
+            ))}
+            </>
+        );
+    } else if (loading === false && URL === "category/summer_sale") {
+        const summerSale = productos.filter(producto => producto.sale === "summer");
+        console.log(summerSale);
+
+        return (
+            <>
+            {summerSale.map((producto) => (
+                <Item key={producto.id} producto={producto} stock={5}/>
+            ))}
+            </>
+        );
+    } */ else {
+        console.log(productos);
+        return (
+            <>
+            {productos.map((producto) => (
+                <Item key={producto.id} producto={producto} stock={5}/>
+            ))}
+            </>
+        );
     }
 };
 
