@@ -1,5 +1,6 @@
 import {React, useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail';
+import { useParams } from 'react-router-dom';
 
 const listaProductos = [
     {id: 1, title: 'vela 1', precio: 365, pictureUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGjezB7jn_AMFQOZZjWdezpTUpfUpPNsD8Tmz5o5RArS1EmsKYQLv64asnpNpsfAM9SdQ&usqp=CAU', stock: 5},
