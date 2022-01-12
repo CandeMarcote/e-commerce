@@ -9,7 +9,7 @@ function Nav () {
                 <li><Link to="/category/winter">Winter Sale</Link></li>
                 <li><Link to="/category/summer">Summer sale</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
-                <li><CartWidget></CartWidget></li>
+                <li><Link to="/cart"><CartWidget></CartWidget></Link></li>
             </ul>
         </nav>
     )

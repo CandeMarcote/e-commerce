@@ -1,6 +1,6 @@
 // import React, {useState, useEffect} from 'react'
 import React from 'react';
-import ItemCount from './ItemCount';
+// import ItemCount from './ItemCount';
 import { Link } from "react-router-dom"
 
 /*const Item = ({id, title, price, pictureUrl}) => {
@@ -54,7 +54,7 @@ const Item = ({producto}) => {
                 <h5>{title}</h5>
                 <h6 className="price">$ {precio}</h6>
             </div>
-            <ItemCount></ItemCount>
+            {/* <ItemCount></ItemCount> */}
             <Link to={"/item/" + id} className="link__verMas">Ver más</Link>
         </div>
     )

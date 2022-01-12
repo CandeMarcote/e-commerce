@@ -2,6 +2,7 @@ import React from 'react'
 import ItemListContainer from './ItemListContainer';
 import ItemDetailContainer from './ItemDetailContainer';
 import { Routes, Route } from "react-router-dom";
+import Cart from './Cart';
 
 
 /* cosas que tenemos que agregar en el Routes:
@@ -22,6 +23,7 @@ const Main = ()=> {
                 <Route path="/" element={<ItemListContainer />} />
                 <Route path="/category/:id" element={<ItemListContainer/>} />
                 <Route path="/item/:id" element={<ItemDetailContainer/>} />
+                <Route path="/cart" element={<Cart/>} />
             </Routes>
         </main>
     )

@@ -31,7 +31,7 @@ const ItemListContainer = () => {
 
         promesa.then((res) => {
             setLoading(false);
-            setProductos(!id?res:(res.filter((producto) => {return producto.sale == id})));
+            setProductos(!id?res:(res.filter((producto) => {return producto.sale === id})));
         })
         
         promesa.catch(() => {
@@ -46,7 +46,7 @@ const ItemListContainer = () => {
             </div>
         );
     } else {
-        console.log(productos);
+        // console.log(productos);
         return (
             <div className="items__container">
                 <ItemList productos = {productos} />
