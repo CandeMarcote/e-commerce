@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemList from './ItemList';
+import ItemListContainer from './ItemListContainer';
 import ItemDetailContainer from './ItemDetailContainer';
 import { Routes, Route } from "react-router-dom";
 
@@ -19,9 +19,8 @@ const Main = ()=> {
     return (
         <main>
             <Routes>
-                <Route path="/" element={<ItemList />} />
-                <Route path="/category/winter_sale" element={<ItemList/>} />
-                <Route path="/category/summer_sale" element={<ItemList/>} />
+                <Route path="/" element={<ItemListContainer />} />
+                <Route path="/category/:id" element={<ItemListContainer/>} />
                 <Route path="/item/:id" element={<ItemDetailContainer/>} />
             </Routes>
         </main>
