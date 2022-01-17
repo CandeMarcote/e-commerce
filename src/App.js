@@ -1,17 +1,18 @@
 import Header from './components/Header';
 import Main from './components/Main';
-import { BrowserRouter } from "react-router-dom"
 import Footer from './components/Footer';
+import { BrowserRouter } from "react-router-dom";
+import CartProvider from './components/Context';
 
 function App() {
     return (
-        <>
+        <CartProvider>
             <BrowserRouter>
                 <Header />
                 <Main />
                 <Footer />
             </BrowserRouter>
-        </>
+        </CartProvider>
     )
 }
 // recordar que los console logs se quedan en la consola mas alla de que la pagina se recargue
