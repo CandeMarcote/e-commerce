@@ -1,11 +1,17 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useContext } from 'react';
 
-export const Context = createContext({
-    cart: [],
-    precio_total: 0,
-    cantidad_total: 0
+const Context = createContext([])
 
-    /*
+export const UseCartContext = () => useContext(Context)
+
+const CartProvider = ({children}) => {
+
+    const [cart, setCart] = useState([])
+    const [precio_total, setPrecio_total] = useState(0)
+    const [cantidad_total, setCantidad_total] = useState(0)
+
+       /*
+
     const Provider = context.Provider : permite proveer un contexto y que este pueda ser modificado.
     const Provider = context.Consumer : ya no se usa mas, te permitia consummir el valor del contexto. Ahora se usa useContext().
     ó
@@ -13,15 +19,23 @@ export const Context = createContext({
     useContext() : e un hook que te permite consumir el contexto
     */
 
-})
+   const addProduct = (item, cantidad) => {
+       setCart([...cart, {item, cantidad}])
+       console.log(cart)
+   };
 
-const { Provider } = Context;
+   const deleteProduct = (id) => {
+       const items = cart.filter((i) => i.item.id !== id)
+       setCart(items)
+   };
 
-const CartProvider = ({children}) => {
+   const isInCart = () => {};
 
-    const [cart, setCart] = useState([])
-    const [precio_total, setPrecio_total] = useState(0)
-    const [cantidad_total, setCantidad_total] = useState(0)
+   const cleanCart = () => {
+       setCart([])
+   };
+
+   const { Provider } = Context;
 
     const contextValue = {
         cart, 
@@ -32,13 +46,6 @@ const CartProvider = ({children}) => {
         cleanCart
     }
 
-    const addProduct = () => {};
-
-    const deleteProduct = () => {};
-
-    const isInCart = () => {};
-
-    const cleanCart = () => {};
 
     return (
         <Provider value={contextValue}>
