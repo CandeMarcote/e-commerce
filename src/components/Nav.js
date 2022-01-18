@@ -1,10 +1,10 @@
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import { UseCartContext } from "./Context";
+import {UseCartContext} from './Context'
 
 function Nav () {
 
-    const {cantidad_total} = UseCartContext();
+    const {cantidad_total} = UseCartContext()
 
     return (
         <nav>

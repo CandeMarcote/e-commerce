@@ -23,7 +23,7 @@ const ItemListContainer = () => {
         const promesa = new Promise((res, rej) => {
             setTimeout(() => {
                 res(listaProductos);
-            }, 2000);
+            }, 500);
             //API REST o DataBase
             //conseguimos el archivo
             //modificamos el estado
