@@ -13,6 +13,7 @@ const CartProvider = ({children}) => {
 
     const addProduct = (item, cantidad) => {
         setCart([...cart, {item, cantidad}])
+
         console.log(cart)
     };
 
@@ -26,11 +27,12 @@ const CartProvider = ({children}) => {
     };
 
     const cleanCart = () => {
-        setCart([])
+        setCart([cart])
     };
 
     return (
-        <Context.Provider value={{  cart, 
+        <Context.Provider value={{
+            cart, 
             precio_total, 
             cantidad_total,
             addProduct,

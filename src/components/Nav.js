@@ -4,7 +4,7 @@ import {UseCartContext} from './Context'
 
 function Nav () {
 
-    const {cantidad_total} = UseCartContext()
+    const {cart} = UseCartContext()
 
     return (
         <nav>
@@ -16,7 +16,7 @@ function Nav () {
                 <li><Link to="/cart">
                     <div className="cart_widget">
                         <CartWidget></CartWidget>
-                        <div className="cart_widget-total">{cantidad_total}</div>
+                        <div className="cart_widget-total">{cart.length}</div>
                     </div>
                     </Link></li>
             </ul>
