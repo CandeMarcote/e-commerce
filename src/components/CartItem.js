@@ -4,8 +4,8 @@ import { UseCartContext } from './Context';
 function CartItem({item, cantidad}) {
     const {title, precio, stock, pictureUrl} = item;
     const { deleteProduct } = UseCartContext();
-
-
+    console.log(stock)
+    
   return <div>
       <h4>{title}</h4>
       <img style={{width:"60px", height:"auto"}}src={pictureUrl} alt={title}/>

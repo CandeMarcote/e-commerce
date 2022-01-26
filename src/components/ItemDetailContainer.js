@@ -1,6 +1,8 @@
 import {React, useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
+import { db } from "./firebase"
+import { collection, getDoc, doc } from "firebase/firestore"
 
 const listaProductos = [
     {id: 1, title: 'vela 1', precio: 365, pictureUrl: 'https://cb.scene7.com/is/image/Crate/FlckrFlmlsWhtInWxPlrCdl3x4SSF20/$web_pdp_main_carousel_zoom_high$/200324152457/flickering-flameless-wheat-inclusion-wax-pillar-candle-3x4.jpg', stock: 5, sale: "winter"},
@@ -18,21 +20,23 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState([]);
     const [loading, setLoading] = useState(false);
     const {id} = useParams();
-    const getItem = listaProductos.filter((item) => {
-        return item.id === +id
-    })
 
     useEffect(() => {
-        const promise = new Promise ((res, rej) => {
-            setTimeout(() => {
-                res(getItem)
-            }, 2000);
-        })
+        const productsCollection = collection(db, "products");
+        const docRef = doc(productsCollection, id);
+        // console.log(docRef);
+        const request = getDoc(docRef);
 
-        promise.then((res) => {
-            setItem(res);
-            setLoading(true)
-        })
+        request
+            .then ((result) => {
+                // console.log(result.id)
+                const product = result.data()
+                setItem(product)
+                setLoading(false)
+            })
+            .catch ((error) => {
+                console.log(error)
+            })
     }, [id]);
 
     if (!loading) {
@@ -44,7 +48,7 @@ const ItemDetailContainer = () => {
     } else {
         return(
             <div className="itemDetailContainer">
-                {item.map((item) => (<ItemDetail item={item} key={id}/>))}
+                <ItemDetail item={item} key={id}/>
             </div>
         )
     }

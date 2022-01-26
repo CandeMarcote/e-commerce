@@ -3,7 +3,7 @@ import ItemCount from './ItemCount'
 import {UseCartContext} from './Context'
 
 const ItemDetail = ({item}) => {
-    const {title, precio, stock, pictureUrl} = item;
+    const {title, price, stock, pictureUrl} = item;
 
 const {addProduct} = UseCartContext()
 
@@ -18,7 +18,7 @@ const {addProduct} = UseCartContext()
             </div>
             <div className='container__detail'>
                 <h3>{title}</h3>
-                <p className='price'>$ {precio}</p>
+                <p className='price'>$ {price}</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat ipsam ad soluta blanditiis. Voluptate vitae dolorum expedita saepe aliquam possimus provident laudantium accusantium facere, maxime quod veniam rerum molestiae laboriosam.</p>
                 <ItemCount stock={stock} onAdd={onAdd}/>
                 <button to="/cart">Check cart</button>

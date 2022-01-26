@@ -69,3 +69,55 @@ XMLHttpRequest (XHR) : es una API WEB y funciona para hacer peticiones ajax con 
 
 Fetch: es una API web y funciona para hacer peticiones ajax con prommise.
 
+
+
+
+
+if(id) {
+            //3 parametros: firebase, nombre de la coleccion que hicimos en firebase y una que no vamos a usar.
+            const productsCollection = collection(db, "products");
+            const filter = where("sale", "==", id)
+            // console.log(filter)
+            const categoryQuery = query(productsCollection, filter)
+            const request = getDocs(categoryQuery)
+    
+            request
+                .then((result) => {
+                    const docs = result.docs
+                    const docs_formateado = docs.map(doc => {
+                        const product = {
+                            id : doc.id,
+                            ...doc.data()
+                        }
+                        return product
+                    })
+                    setProductos(docs_formateado)
+                    setLoading(false)
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        } else {
+            const productsCollection = collection(db, "products");
+            const categoryQuery = query(productsCollection)
+            const request = getDocs(categoryQuery)
+    
+            request
+                .then((result) => {
+                    const docs = result.docs
+                    const docs_formateado = docs.map(doc => {
+                        const product = {
+                            id : doc.id,
+                            ...doc.data()
+                        }
+                        return product
+                    })
+                    setProductos(docs_formateado)
+                    console.log(docs_formateado)
+                    setLoading(false)
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+            
+        }
