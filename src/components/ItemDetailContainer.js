@@ -32,7 +32,7 @@ const ItemDetailContainer = () => {
                 // console.log(result.id)
                 const product = result.data()
                 setItem(product)
-                setLoading(false)
+                setLoading(true)
             })
             .catch ((error) => {
                 console.log(error)
