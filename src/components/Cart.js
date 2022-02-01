@@ -1,22 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import {UseCartContext} from './Context';
 import CartItem from "./CartItem";
+import {db} from "./firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+
 
 const Cart = () => {
 
-    const { cart, cleanCart } = UseCartContext();
-    console.log(cart);
+    const { cart, cleanCart, cantidad_total } = UseCartContext();
+    const [order, setOrder] = useState(false)
+    // console.log(cart);
+    const createOrder = () => {
+
+        const productsCollection = collection(db, "orders");
+
+        const user = {
+            nombre: "Candelaria",
+            email: "candemarcote@gmail.com",
+            telefono: "2995041172"
+        }
+
+        const order = {
+            user,
+            cart,
+            cantidad_total,
+            created_at: serverTimestamp()
+        }
+
+        const request = addDoc(productsCollection, order)
+
+        request
+            .then((result) => {
+                setOrder(result.id)
+                alert('compra confirmada: ' + result.id)
+            })
+            .catch((error) => {
+                console.log("Se ha producido un error")
+            })
+            .finally((res)=> {
+                alert('Gracias por su compra!')
+            })
+    }
 
     if(cart.length < 1) {
         return (
             <h4>No hay productos en el carrito</h4>
         )
     } else {
+        // console.log(cart)
         return (
             <div>
                 <h1>The Cart</h1>
                 {cart.map((item) => <CartItem key={item.id} item={item.item} cantidad={item.cantidad} />)}
                 <button onClick={cleanCart}>Clean Cart</button>
+                <button onClick={createOrder}>Comfirm order</button>
+                {order && <p>Order: {order}</p>}
             </div>
         );
     }

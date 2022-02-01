@@ -15,7 +15,7 @@ const ItemListContainer = () => {
     
     useEffect(() => {
 
-        console.log(id)
+        // console.log(id)
 
         if(id) {
             //3 parametros: firebase, nombre de la coleccion que hicimos en firebase y una que no vamos a usar.

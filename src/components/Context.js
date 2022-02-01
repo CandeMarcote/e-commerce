@@ -12,9 +12,11 @@ const CartProvider = ({children}) => {
 
 
     const addProduct = (item, cantidad) => {
+        
+        const index = cart.findIndex((i) => i.item.id === item.id);
         // setCart([...cart, {item, cantidad}])
+        
 
-            const index = cart.findIndex((i) => i.item.id === item.id);
         if (index > -1) {
             cart.splice(index, 1);
             setCart([...cart, {item, cantidad}])
