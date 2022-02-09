@@ -1,6 +1,4 @@
 import { useState } from "react"
-// import CartButton from "./CartButton"
-
 
 const ItemCount = ({ initial = 1, stock, onAdd }) => {
 
@@ -44,8 +42,8 @@ const ItemCount = ({ initial = 1, stock, onAdd }) => {
             <button className="itemBtn" onClick={disminuirContador}>-</button>
             <button className="itemBtn" onClick={resetContador}>reset</button>
             <button className="itemBtn" onClick={aumentarContador}>+</button>
-            <div className="cartButtonContainer">
-                <button className="cartButton" onClick={confirmQuantity}>Add to Cart!</button>
+            <div className="addtocart_btn-container">
+                <button className="addtocart_btn" onClick={confirmQuantity}>Add to Cart!</button>
             </div>
         </div>
     )

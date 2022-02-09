@@ -1,0 +1,26 @@
+:root {
+    --border: solid 2px red;
+    --border2: solid 2px green;
+    --border3: solid 2px blue;
+
+    --clr-bg: #f8eae1;
+    --clr-primary: #7b5051;
+    --clr-burlywood05: rgb(222, 184, 135, 0.3);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-bg);    
+    font-family: sans-serif;
+
+    main {
+        min-height: 70vh;
+        display: grid;
+        place-content: center;
+    }
+}

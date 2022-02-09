@@ -21,7 +21,7 @@ const {addProduct} = UseCartContext()
                 <p className='price'>$ {price}</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat ipsam ad soluta blanditiis. Voluptate vitae dolorum expedita saepe aliquam possimus provident laudantium accusantium facere, maxime quod veniam rerum molestiae laboriosam.</p>
                 <ItemCount stock={stock} onAdd={onAdd}/>
-                <button to="/cart">Check cart</button>
+                <button to="/cart" className='checkCart'>Check cart</button>
             </div>
         </main>
     )

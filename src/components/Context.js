@@ -14,7 +14,7 @@ const CartProvider = ({children}) => {
     const addProduct = (item, cantidad) => {
         
         const index = cart.findIndex((i) => i.item.id === item.id);
-        // setCart([...cart, {item, cantidad}])
+        setCart([...cart, {item, cantidad}])
         
 
         if (index > -1) {

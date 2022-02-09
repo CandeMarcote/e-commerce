@@ -1,0 +1,80 @@
+header {
+    background: linear-gradient(to right, rgb(158, 144, 135, 0.5), rgb(158, 144, 135, 0.7)), url(https://cdn.shopify.com/s/files/1/0331/4188/3012/collections/Flowers_Header_0850_1c6ba1e9-8163-47c2-896d-9f6eb042a9e8_2000x.jpg?v=1592388730);
+    display: flex;
+    align-items: center;
+    color: var(--clr-bg);
+    min-height: 15vh;    
+
+    & > * {
+        flex-basis: 100%;
+    }
+
+    .header__title {
+        text-decoration: none;
+
+        h1 {
+            margin: 1.5em;
+            color: var(--clr-bg);
+            text-shadow: 1px 1px 2px black;
+        }
+
+        &:visited{
+            color:var(--clr-bg);
+            text-decoration: none;
+        }
+    }
+
+    nav ul{
+        display: flex;
+        place-content: flex-end;
+        margin-right: 2em;
+
+        li {
+            list-style: none;
+            margin: 1rem;
+            color: var(--clr-bg);
+
+            a{
+                font-family: sans-serif;
+                color: var(--clr-bg);
+                text-shadow: 1px 1px 2px black;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1rem;
+
+                &:visited {
+                    color: var(--clr-bg);
+                }
+            }
+
+            .cartBtn{
+                background: none;
+                border:none;
+                
+                svg {
+                    color:var(--clr-bg);
+                    font-size: 1.2rem;
+                }
+            }
+
+            .cart_widget {
+                position: relative;
+                cursor: pointer;
+
+                .cart_widget-total {
+                    font-size: 0.8rem;
+                    text-align: center;
+                    line-height: 17px;
+                    position: absolute;
+                        top: -10px;
+                        right: -10px;
+
+                    background-color: tomato;
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

@@ -49,11 +49,13 @@ const Cart = () => {
     } else {
         // console.log(cart)
         return (
-            <div>
+            <div className="cart__container">
                 <h1>The Cart</h1>
                 {cart.map((item) => <CartItem key={item.id} item={item.item} cantidad={item.cantidad} />)}
-                <button onClick={cleanCart}>Clean Cart</button>
-                <button onClick={createOrder}>Comfirm order</button>
+                <div className="buttons">
+                <button onClick={cleanCart} className="cleanCart">Clean Cart</button>
+                <button onClick={createOrder} className="confirmOrder">Comfirm order</button>
+                </div>
                 {order && <p>Order: {order}</p>}
             </div>
         );
