@@ -7,44 +7,57 @@ body {
         max-width: 75vw;
 
         .item {
-            background-color: var(--clr-burlywood05);
+            // background-color: var(--clr-burlywood05);
+            background: url(https://thumbs.dreamstime.com/b/floral-wallpaper-beige-tile-16577576.jpg);
+            background-size: contain;
             box-shadow: 1px 1px 5px 2px rgb(176, 196, 180, 0.5);
             color: var(--clr-primary);
             border-radius: 1.5em;
             margin: 1.5em;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            max-height: 350px;
+            max-width: 225px;
+            grid-template-rows: 3/4, auto;
+            grid-template-areas:
+            "img img img"
+            "title . price"
+            "btn btn btn";
 
+            h5, .price {
+                
+                margin: 1.5rem 1rem 0.5rem 1rem;
+                font-size: 1.1rem;
+                padding: 5px;
+                background-color: var(--clr-burlywood05);
+                border-radius: 5px;
+            }
+
+            h5 {
+                grid-area: title;
+            }
+
+            .price {
+                grid-area: price;
+            }
 
             .itemImg {
+                grid-area: img;
                 max-width: 225px;
                 aspect-ratio: 1;
                 object-fit: contain;
                 border-radius: 1.5em;
             }
 
-            .titleAndPrice {
-                &>*{
-                    font-size: 1.2rem;
-                    padding: 5px 1rem;
-                    font-weight: thin;
-                }
-
-                h5 {
-                    font-size: 1.5rem;
-                    font-weight: bolder;
-                    margin-top: 0.5rem;
-                }
-            }
-
             .link__verMas {
+                grid-area: btn;
                 font-size: 1.1rem;
                 text-decoration: none;
-                color: var(--clr-primary);
+                color: var(--clr-bg);
                 text-align: center;
                 margin:1rem;
                 padding: 5px;
-                background: var(--clr-burlywood05);
+                background: var(--clr-primary);
+                border-radius: 5px;
             }
         }
     }

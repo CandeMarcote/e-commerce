@@ -8,10 +8,8 @@ const Item = ({producto}) => {
     return (
         <div className="item">
             <img src={pictureUrl} alt={title} className='itemImg'/>
-            <div className="titleAndPrice">
-                <h5>{title}</h5>
-                <h6 className="price">$ {price}</h6>
-            </div>
+            <h5>{title}</h5>
+            <h6 className="price">$ {price}</h6>
             {/* <ItemCount></ItemCount> */}
             <Link to={"/item/" + id} className="link__verMas">Ver más</Link>
         </div>

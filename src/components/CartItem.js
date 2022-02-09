@@ -1,13 +1,12 @@
 import React from 'react';
 import { UseCartContext } from './Context';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faShoppingCart, faTrash} from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 
 function CartItem({item, cantidad}) {
-    const {title, price, stock, pictureUrl} = item;
+    const {title, price, id, pictureUrl} = item;
     const { deleteProduct } = UseCartContext();
-    // console.log(stock)
     
   return <div className="cart__item">
       <img className="cartItem__img" src={pictureUrl} alt={title}/>

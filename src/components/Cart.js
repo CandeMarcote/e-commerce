@@ -3,6 +3,7 @@ import {UseCartContext} from './Context';
 import CartItem from "./CartItem";
 import {db} from "./firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import swal from 'sweetalert';
 
 
 const Cart = () => {
@@ -32,13 +33,14 @@ const Cart = () => {
         request
             .then((result) => {
                 setOrder(result.id)
-                alert('compra confirmada: ' + result.id)
+                swal("Strike a light!", "Your purchase was succesful!", "success");
+                // alert('compra confirmada: orden ' + result.id)
             })
             .catch((error) => {
-                console.log("Se ha producido un error")
+                console.log("Se ha producido un error: " + error)
             })
             .finally((res)=> {
-                alert('Gracias por su compra!')
+                cleanCart();
             })
     }
 
@@ -56,7 +58,7 @@ const Cart = () => {
                 <button onClick={cleanCart} className="cleanCart">Clean Cart</button>
                 <button onClick={createOrder} className="confirmOrder">Comfirm order</button>
                 </div>
-                {order && <p>Order: {order}</p>}
+                {/* {order && <p>Order: {order}</p>} */}
             </div>
         );
     }
