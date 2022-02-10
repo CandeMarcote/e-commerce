@@ -32,8 +32,22 @@ const CartProvider = ({children}) => {
         setCart(items)
     };
 
-    const isInCart = () => {
+    const agregar = (item, cantidad) => {
+        const itemFiltrado = cart.findIndex((i)=> i.item.id == item.id)
+        cart.splice(itemFiltrado, 1/*, el item se tendria que insertar aqui*/);
+        setCart([...cart, {item, cantidad: cantidad + 1}])
+     
+    };
 
+
+    const restar = (item, cantidad) => {
+
+       if(cantidad > 1) { const itemFiltrado = cart.findIndex((i)=> i.item.id == item.id)
+
+        cart.splice(itemFiltrado, 1/*, item*/);
+
+        setCart([...cart, {item, cantidad: cantidad - 1}])}
+     
     };
 
     const cleanCart = () => {
@@ -47,7 +61,9 @@ const CartProvider = ({children}) => {
             cantidad_total,
             addProduct,
             deleteProduct,
-            cleanCart}}>
+            cleanCart,
+            agregar,
+            restar}}>
             {children}
         </Context.Provider>        
     )

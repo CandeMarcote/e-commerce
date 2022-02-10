@@ -78,3 +78,23 @@ header {
         }
     }
 }
+
+// @media screen and (max-width: 750px) {
+//     body {
+//         background-color: red;
+//         header {
+//             nav {
+//                 background-color: var(--clr-burlywood05);
+//                 padding-right: 3em;
+//                 display: none;
+
+//                 .navBar__toggle:checked ~ nav {
+//                     display: block;
+//                 }
+//                 ul {
+//                     text-align: left;
+//                 }
+//             }
+//         }
+//     }
+// }
