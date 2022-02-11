@@ -33,7 +33,7 @@ const Cart = () => {
         request
             .then((result) => {
                 setOrder(result.id)
-                swal("Strike a light!", "Your purchase was succesful!", "success");
+                swal("Strike a light!", `Your purchase was succesful! \n Order:  ${result.id}` , "success");
                 // alert('compra confirmada: orden ' + result.id)
             })
             .catch((error) => {
@@ -53,7 +53,7 @@ const Cart = () => {
         return (
             <div className="cart__container">
                 <h1>The Cart</h1>
-                {cart.map((item, i) => <CartItem key={item[i]} item={item.item} cantidad={item.cantidad} />)}
+                {cart.map((item, i) => <CartItem key={i} item={item.item} cantidad={item.cantidad} />)}
                 <div className="buttons">
                 <button onClick={cleanCart} className="cleanCart">Clean Cart</button>
                 <button onClick={createOrder} className="confirmOrder">Comfirm order</button>

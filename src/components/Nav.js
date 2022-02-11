@@ -22,7 +22,7 @@ function Nav () {
                 <li><Link to="/">Candles</Link></li>
                 <li><Link to="/category/winter">Winter Sale</Link></li>
                 <li><Link to="/category/summer">Summer sale</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                {/* <li><Link to="/contact">Contact</Link></li> */}
                 <li><Link to="/cart">
                     <div className="cart_widget">
                         <div className="cart_widget-total">{cart ? cart.length : " "}</div>
