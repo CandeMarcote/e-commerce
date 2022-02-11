@@ -11,7 +11,7 @@ function CartItem({item, cantidad}) {
   return <div className="cart__item">
       <img className="cartItem__img" src={pictureUrl} alt={title}/>
       <h4>{title}</h4>
-      <p>$ {price}</p>
+      <p>$ {price * cantidad}</p>
       <p>Quantity: </p>
       <button onClick={()=>restar(item, cantidad)}>-</button>
       <p>{cantidad}</p>

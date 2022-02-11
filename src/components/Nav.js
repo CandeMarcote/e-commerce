@@ -25,7 +25,7 @@ function Nav () {
                 <li><Link to="/contact">Contact</Link></li>
                 <li><Link to="/cart">
                     <div className="cart_widget">
-                        <div className="cart_widget-total">{cart.length}</div>
+                        <div className="cart_widget-total">{cart ? cart.length : " "}</div>
                         <CartWidget></CartWidget>
                     </div>
                     </Link></li>

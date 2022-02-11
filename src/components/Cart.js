@@ -53,7 +53,7 @@ const Cart = () => {
         return (
             <div className="cart__container">
                 <h1>The Cart</h1>
-                {cart.map((item) => <CartItem key={item.id} item={item.item} cantidad={item.cantidad} />)}
+                {cart.map((item, i) => <CartItem key={item[i]} item={item.item} cantidad={item.cantidad} />)}
                 <div className="buttons">
                 <button onClick={cleanCart} className="cleanCart">Clean Cart</button>
                 <button onClick={createOrder} className="confirmOrder">Comfirm order</button>
