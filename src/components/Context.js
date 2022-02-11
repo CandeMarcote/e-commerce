@@ -1,4 +1,5 @@
 import { createContext, useState, useContext } from 'react';
+import { useLocalStorage } from './useLocalStorage';
 
 const Context = createContext([])
 
@@ -6,10 +7,9 @@ export const UseCartContext = () => useContext(Context);
 
 const CartProvider = ({children}) => {
 
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useLocalStorage('catch', [])
     const [precio_total, setPrecio_total] = useState(0)
     const [cantidad_total, setCantidad_total] = useState(0)
-
 
     const addProduct = (item, cantidad) => {
         
