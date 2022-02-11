@@ -33,9 +33,9 @@ const CartProvider = ({children}) => {
 
     const agregar = (item, cantidad) => {
         const itemFiltrado = cart.findIndex((i)=> i.item.id == item.id)
-        cart.splice(itemFiltrado, 1/*, el item se tendria que insertar aqui*/);
-        setCart([...cart, {item, cantidad: cantidad + 1}])
-     
+        cart.splice(itemFiltrado, 1, {item, cantidad: ++cantidad} );
+
+        setCart([...cart])
     };
 
 
@@ -43,9 +43,9 @@ const CartProvider = ({children}) => {
 
        if(cantidad > 1) { const itemFiltrado = cart.findIndex((i)=> i.item.id == item.id)
 
-        cart.splice(itemFiltrado, 1/*, item*/);
+        cart.splice(itemFiltrado, 1, {item, cantidad: --cantidad}/*, item*/);
         
-        setCart([...cart, {item, cantidad: cantidad - 1}])}
+        setCart([...cart])}
      
     };
 
