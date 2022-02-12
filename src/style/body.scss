@@ -23,4 +23,16 @@ body {
         display: grid;
         place-content: center;
     }
+
+    button {
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.85;
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
 }

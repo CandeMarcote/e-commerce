@@ -37,7 +37,7 @@ const Cart = () => {
                 // alert('compra confirmada: orden ' + result.id)
             })
             .catch((error) => {
-                console.log("Se ha producido un error: " + error)
+                console.log("An error has occured: " + error)
             })
             .finally((res)=> {
                 cleanCart();
@@ -46,7 +46,7 @@ const Cart = () => {
 
     if(cart.length < 1) {
         return (
-            <h4 className="cart_empty_message">No hay productos en el carrito</h4>
+            <h4 className="cart_empty_message">The cart is empty...</h4>
         )
     } else {
         // console.log(cart)
