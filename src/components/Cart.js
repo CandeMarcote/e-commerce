@@ -46,7 +46,7 @@ const Cart = () => {
 
     if(cart.length < 1) {
         return (
-            <h4>No hay productos en el carrito</h4>
+            <h4 className="cart_empty_message">No hay productos en el carrito</h4>
         )
     } else {
         // console.log(cart)
