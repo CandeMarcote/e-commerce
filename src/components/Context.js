@@ -8,8 +8,8 @@ export const UseCartContext = () => useContext(Context);
 const CartProvider = ({children}) => {
 
     const [cart, setCart] = useLocalStorage('catch', [])
-    const [precio_total, setPrecio_total] = useState(0)
-    const [cantidad_total, setCantidad_total] = useState(0)
+    const [precio_total, /*setPrecio_total*/] = useState(0)
+    const [cantidad_total, /*setCantidad_total*/] = useState(0)
 
     const addProduct = (item, cantidad) => {
         
@@ -32,7 +32,7 @@ const CartProvider = ({children}) => {
     };
 
     const agregar = (item, cantidad) => {
-        const itemFiltrado = cart.findIndex((i)=> i.item.id == item.id)
+        const itemFiltrado = cart.findIndex((i)=> i.item.id === item.id)
         cart.splice(itemFiltrado, 1, {item, cantidad: ++cantidad} );
 
         setCart([...cart])
@@ -41,7 +41,7 @@ const CartProvider = ({children}) => {
 
     const restar = (item, cantidad) => {
 
-       if(cantidad > 1) { const itemFiltrado = cart.findIndex((i)=> i.item.id == item.id)
+       if(cantidad > 1) { const itemFiltrado = cart.findIndex((i)=> i.item.id === item.id)
 
         cart.splice(itemFiltrado, 1, {item, cantidad: --cantidad}/*, item*/);
         

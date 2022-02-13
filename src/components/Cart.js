@@ -9,7 +9,7 @@ import swal from 'sweetalert';
 const Cart = () => {
 
     const { cart, cleanCart, cantidad_total } = UseCartContext();
-    const [order, setOrder] = useState(false)
+    const [/*order*/, setOrder] = useState(false)
     // console.log(cart);
     const createOrder = () => {
 

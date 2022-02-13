@@ -21,9 +21,9 @@ function Nav () {
     return (
         <nav>
             <ul>
-                <li><Link to="/">{location.pathname == "/" ? <p style={{textDecoration: "underline"}}>Candles</p> : <p>Candles</p>}</Link></li>
-                <li><Link to="/category/winter">{location.pathname == "/category/winter" ? <p style={{textDecoration: "underline"}}>Winter Sale</p> : <p>Winter sale</p>}</Link></li>
-                <li><Link to="/category/summer">{location.pathname == "/category/summer" ? <p style={{textDecoration: "underline"}}>Summer Sale</p> : <p>Summer sale</p>}</Link></li>
+                <li><Link to="/">{location.pathname === "/" ? <p style={{textDecoration: "underline"}}>Candles</p> : <p>Candles</p>}</Link></li>
+                <li><Link to="/category/summer">{location.pathname === "/category/summer" ? <p style={{textDecoration: "underline"}}>Summer sale</p> : <p>Summer sale</p>}</Link></li>
+                <li><Link to="/category/winter">{location.pathname === "/category/winter" ? <p style={{textDecoration: "underline"}}>Winter sale</p> : <p>Winter sale</p>}</Link></li>
                 {/* <li><Link to="/contact">Contact</Link></li> */}
                 <li><Link to="/cart">
                     <div className="cart_widget">

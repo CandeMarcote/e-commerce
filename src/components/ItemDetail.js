@@ -1,6 +1,7 @@
 import React from 'react';
 import ItemCount from './ItemCount'
 import {UseCartContext} from './Context'
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({item}) => {
     const {title, price, stock, pictureUrl} = item;
@@ -21,7 +22,7 @@ const {addProduct} = UseCartContext()
                 <p className='price'>$ {price}</p>
                 <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat ipsam ad soluta blanditiis. Voluptate vitae dolorum expedita saepe aliquam possimus provident laudantium accusantium facere, maxime quod veniam rerum molestiae laboriosam.</p>
                 <ItemCount stock={stock} onAdd={onAdd}/>
-                <button to="/cart" className='checkCart'>Check cart</button>
+                <Link to="/cart" className='checkCart'>Check cart</Link>
             </div>
         </main>
     )
