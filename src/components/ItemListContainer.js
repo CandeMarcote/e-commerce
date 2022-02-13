@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { db } from "./firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import { SpinnerInfinity } from 'spinners-react';
 
 
 // console.log(db)
@@ -69,7 +70,7 @@ const ItemListContainer = () => {
     if (loading === true) {
         return (
             <div>
-                <p>Cargando...</p>
+                <p><SpinnerInfinity size="20vw" color="#7b5051" secondaryColor="burlywood" /></p>
             </div>
         );
     } else {

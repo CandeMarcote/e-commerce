@@ -3,6 +3,7 @@ import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
 import { db } from "./firebase"
 import { collection, getDoc, doc } from "firebase/firestore"
+import { SpinnerInfinity } from 'spinners-react';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState([]);
@@ -30,7 +31,7 @@ const ItemDetailContainer = () => {
     if (!loading) {
         return (
             <>
-            <h2>...Cargando</h2>
+            <h2><SpinnerInfinity size="20vw" color="#7b5051" secondaryColor="burlywood" /></h2>
             </>
         )
     } else {

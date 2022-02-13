@@ -1,7 +1,7 @@
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 import {UseCartContext} from './Context'
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom"
 
 function Nav () {
