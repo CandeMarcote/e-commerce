@@ -20,6 +20,8 @@ function Nav () {
 
     return (
         <nav>
+            <label id="responsive_navbar_container" htmlFor="navbar_checkbox"><div id="responsive_navbar"></div></label>
+            <input type="checkbox" id="navbar_checkbox" />
             <ul>
                 <li><Link to="/">{location.pathname === "/" ? <p style={{textDecoration: "underline"}}>Candles</p> : <p>Candles</p>}</Link></li>
                 <li><Link to="/category/summer">{location.pathname === "/category/summer" ? <p style={{textDecoration: "underline"}}>Summer sale</p> : <p>Summer sale</p>}</Link></li>

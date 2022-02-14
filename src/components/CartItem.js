@@ -12,11 +12,13 @@ function CartItem({item, cantidad}) {
       <img className="cartItem__img" src={pictureUrl} alt={title}/>
       <h4>{title}</h4>
       <p>$ {price * cantidad}</p>
-      <p>Quantity: </p>
-      <button onClick={()=>restar(item, cantidad)}>-</button>
-      <p>{cantidad}</p>
-      <button onClick={()=>agregar(item, cantidad)}>+</button>
-      <button onClick={()=>deleteProduct(id)}><FontAwesomeIcon icon={faTrash} /></button>
+      <div className="quantity">
+        <span>Quantity: </span>
+        <button onClick={()=>restar(item, cantidad)}> - </button>
+        <span>{cantidad}</span>
+        <button onClick={()=>agregar(item, cantidad)}> + </button>
+      </div>
+      <button className="delete_item" onClick={()=>deleteProduct(id)}><FontAwesomeIcon icon={faTrash} /></button>
   </div>;
 }
 

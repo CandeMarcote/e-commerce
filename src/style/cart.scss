@@ -31,6 +31,15 @@ body {
                     place-items: center;
                     padding: 1rem;
                     border-bottom: solid 1px grey;
+                    @media screen and (max-width:800px) {
+                        display: grid;
+                        grid-template-areas:
+                        "img title title price price"
+                        "img quantity quantity quantity delete"; 
+                        .cartItem__img{ grid-area: img;}
+                        .delete_item{ grid-area: delete;}      
+                        .quantity {grid-area: quantity;}
+                    }
     
                     &:first-of-type {
                         border-top: grey solid 1px;
@@ -49,6 +58,7 @@ body {
                         color: var(--clr-primary);
                         cursor: pointer;
                         margin-top: 0;
+                        margin: 0 1em;
                     }
                 }
 
